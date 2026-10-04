@@ -56,6 +56,7 @@ if __name__ == "__main__":
     print(um.get_use(99))
     print(um.update_age(1,99))
     print(um.remove_user(2))
+    print(um.remove_user(2))
     print(um.list_users())
     um.save_to_json("user.json")
     um2 = UserManager()
