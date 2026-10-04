@@ -23,11 +23,11 @@
 代码实现：
 def safe_divide(a, b):
     try:
-        num_a = float(a)
-        num_b = float(b)
-        return num_a / num_b
+        a = float(a)
+        b = float(b)
+        return a / b
     except (ValueError, ZeroDivisionError):
         return None
 
 为什么用 try/except 更好：
-使用 try/except 更符合 Python 的 EAFP 风格（先尝试执行，遇到错误再处理），代码更简洁。如果用 if 预判，需要写很多代码来检查字符串是否能转为浮点数，并且很难完全覆盖所有异常情况。try/except 能够更优雅地集中处理异常，可读性更高。
+if语句判断麻烦，逻辑复杂，会漏掉很多意想不到的异常。
