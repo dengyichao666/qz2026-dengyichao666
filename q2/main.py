@@ -1,10 +1,11 @@
+import json
 class UserManager:
     """用户管理器"""
     def __init__(self):
         """初始化"""
         self.users = {}
 
-    def add_user(self, user_id, name):
+    def add_user(self, user_id, name,age):
         """添加用户"""
         if user_id in self.users:
             return False, "用户ID已存在"
@@ -34,7 +35,7 @@ class UserManager:
 
 if __name__ == "__main__":
     um = UserManager()
-    # 简单演示
+    # 创建类
     print(um.add_user(1, "张三"))
     print(um.get_user(1))
     print(um.update_user(1, "张三三"))
