@@ -40,6 +40,11 @@ class UserManager:
         save_data = {"users":self.users,"next_id":self.next_id}
         with open(filename,"w",encoding = "utf-8") as f:
             json.dump(save_data,f,ensure_ascii = False)
+    def load_from_json(self,filename):
+        with open(filename,"r",encoding = "urf-8") as f:
+            data = json.load(f)
+            self.users = data["users"]
+            self.next_id = data["next_id"]
     
 
 
