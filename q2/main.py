@@ -25,15 +25,22 @@ class UserManager:
         """修改用户"""
         if user_id not in self.users:
             return False, "用户不存在"
-        self.users[user_id] = new_name
+        self.users[user_id]["age"] = new_age
         return True, "修改成功"
 
-    def delete_user(self, user_id):
+    def remove_user(self, user_id):
         """删除用户"""
         if user_id not in self.users:
             return False, "用户不存在"
         del self.users[user_id]
         return True, "删除成功"
+    def list_users(self):
+        return list(self.users.values())
+    def save_to_json(self,filename):
+        save_data = {"users":self.users,"next_id":self.next_id}
+        with open(filename,"w",encoding = "utf-8") as f:
+            json.dump(save_data,f,ensure_ascii = False)
+    
 
 
 if __name__ == "__main__":
