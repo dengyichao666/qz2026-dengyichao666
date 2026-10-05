@@ -28,6 +28,9 @@ def analyze_log(filepath):
           if level == "ERROR":
             result["last_error"] = log_data["message"]
         except json.JSONDecodeError:
-          continue          
+          continue
+  except FileNotFoundError:
+    pass
+  return result
             
              
