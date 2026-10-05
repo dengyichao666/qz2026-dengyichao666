@@ -25,6 +25,9 @@ def analyze_log(filepath):
             result["by_user"][user] += 1
           else:
             result["by_user"][user] = 1
+          if level == "ERROR":
+            result["last_error"] = log_data["message"]
+        except json.JSONDecodeError:
           
             
              
