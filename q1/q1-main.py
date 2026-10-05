@@ -13,7 +13,7 @@ def analyze_log(filepath):
         if not line:
           continue
         try:
-          log_data = json.load(line)
+          log_data = json.loads(line)
           result["total"] +=1
           level = log_data["level"]
           user = log_data["user"]
