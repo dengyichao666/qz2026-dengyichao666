@@ -7,3 +7,7 @@ def test_case():
     print("按级别统计：", res1["by_level"])
     print("按用户统计：", res1["by_user"])
     print("最后一条错误信息：", res1["last_error"])
+
+    """示例2：文件不存在"""
+    res2 = analyze_log("not_exist.jsonl")
+    print("文件不存在测试：", res2)
