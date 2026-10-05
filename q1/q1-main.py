@@ -18,4 +18,13 @@ def analyze_log(filepath):
           level = log_data["level"]
           user = log_data["user"]
           if level in result["by_level"]:
+            result["by_level"][level] += 1
+          else:
             result["by_level"][level] = 1
+          if user in result["by_user"]:
+            result["by_user"][user] += 1
+          else:
+            result["by_user"][user] = 1
+          
+            
+             
