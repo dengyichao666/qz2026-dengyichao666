@@ -17,3 +17,5 @@ def analyze_log(filepath):
           result["total"] +=1
           level = log_data["level"]
           user = log_data["user"]
+          if level in result["by_level"]:
+            result["by_level"][level] = 1
