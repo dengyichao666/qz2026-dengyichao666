@@ -22,3 +22,6 @@ def test_case():
     print(res4["total"])
     print(res4["by_level"])
     print(res4["last_error"])
+
+if _name_ == "_main_":
+    test_case()
