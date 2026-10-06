@@ -15,3 +15,10 @@ def test_case():
     """示例3：空文件"""
     res3 = analyze_log("empty.jsonl")
     print("空文件测试：", res3)
+
+    """示例4：含有非法json行"""
+    res4 = analyze_log("bad.jsonl")
+    print("含错误行测试：")
+    print(res4["total"])
+    print(res4["by_level"])
+    print(res4["last_error"])
