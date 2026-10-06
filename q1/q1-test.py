@@ -11,3 +11,7 @@ def test_case():
     """示例2：文件不存在"""
     res2 = analyze_log("not_exist.jsonl")
     print("文件不存在测试：", res2)
+
+    """示例3：空文件"""
+    res3 = analyze_log("empty.jsonl")
+    print("空文件测试：", res3)
