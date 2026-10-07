@@ -10,15 +10,15 @@ def test_case():
 
     """示例2：文件不存在"""
     result2 = analyze_log("not_exist.jsonl")
-    print("文件不存在测试：", result2)
+    print(\n"文件不存在测试：", result2)
 
     """示例3：空文件"""
     result3 = analyze_log("empty.jsonl")
-    print("空文件测试：", result3)
+    print("\n空文件测试：", result3)
 
     """示例4：含有非法json行"""
     result4 = analyze_log("bad.jsonl")
-    print("含错误行测试：")
+    print("\n含错误行测试：")
     print(result4["total"])
     print(result4["by_level"])
     print(result4["last_error"])
